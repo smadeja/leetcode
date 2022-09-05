@@ -1,11 +1,15 @@
 package neetcode
 
 func twoSum(nums []int, target int) []int {
-	for i := 0; i < len(nums); i++ {
-		for j := i + 1; j < len(nums); j++ {
-			if nums[i]+nums[j] == target {
-				return []int{i, j}
-			}
+	ind := make(map[int]int)
+
+	for i, n := range nums {
+		w := target - n
+
+		if j, ok := ind[w]; ok {
+			return []int{i, j}
+		} else {
+			ind[n] = i
 		}
 	}
 
