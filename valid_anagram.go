@@ -1,4 +1,4 @@
-package neetcode
+package leetcode
 
 func isAnagram(s string, t string) bool {
 	if len(s) != len(t) {

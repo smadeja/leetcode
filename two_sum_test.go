@@ -1,4 +1,4 @@
-package neetcode
+package leetcode
 
 import (
 	"fmt"
